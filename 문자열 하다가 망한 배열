@@ -1,0 +1,95 @@
+// library headers ////////////////////////////////////////
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// global variables ///////////////////////////////////////
+
+
+// section function body //////////////////////////////////
+int string_array() {
+	//문자열 3개 입력받아 출력
+	char s1[80];
+	char s2[80];
+	char s3[80];
+	printf("string > ");
+	fgets(s1, sizeof(s1), stdin);
+	printf("string > ");
+	fgets(s1, sizeof(s2), stdin);
+	printf("string > ");
+	fgets(s1, sizeof(s3), stdin);
+
+	fgets(s1, stdout); //file( ,FILE stream);
+	fgets(s2, stdout);
+	fgets(s3, stdout);
+		return 0;
+
+}
+string_loop() {
+	//문자열 5개를 저장하는 배열
+	char list[문자열 개수][각 문자열 길이]//2차 배열
+		char list[5][80];
+	for (int i = 0; i < 5; ++i) {
+		printf("string >");
+		fgets(list[i], 80, stdin);
+	}
+	for (int i = 0; i < 5; i++) {
+		fputs(list[i], stdout);
+	}
+	return 0;
+}
+string_points() {
+	//포인터 배열
+	char* pl[5]; //pl은 배열명, 포인터 5개 가지고 있는 배열
+	for (int i = 0; i < 5; ++i) {
+		printf("string >");
+		pl[i] = (char*)malloc(80);//pl열에 i공간을 만들어준다?, 배열선언-char*동적
+	//	char t[80];
+		fgets(pl[i], 80, stdin); //생성과 연결
+	}
+	for (int i = 0; i < 5; ++i) {
+		printf("string >");
+		fputs(pl[i], stdout); //포인터의 크기는 4byte, 문자열 저장을 배열이 없다 = 길이가 없다.
+		//문자열 저장 배열
+	}
+	//동적함수 해제!
+	for (int i = 0; i < 5; ++i) {
+		printf("string >");
+		free(pl[i]);
+	}
+
+
+	return 0;
+}
+int string_dynamic() {
+	char** ap = NULL; //포인터 배열(동적)
+	int count;
+	printf("문자열 입력개수 : ");
+	scanf_s("%d', &count);
+		ap = (char**)malloc(count * sizeof(*ap));
+	for (int i = 0; i < count; ++i) {
+		printf("string >"); //ap배열에 i번 포인터에다가 문자열 저장할 공간을 만들어줘야한다.
+		ap[i] = (char*)malloc(80);
+		fgets(ap[i], 80, stdin);
+	}
+	for (int i = 0; i < count; ++i) {
+		printf("string >");
+		fputs(ap[i], stdout);
+	}
+	for (int i = 0; i < count; ++i) {
+		printf("string >");
+		fgets(ap[i], );
+
+
+	return 0;
+}
+// start program //////////////////////////////////////////
+int main(int argc, char** argv) {
+//	string_array();
+//	string_loop();
+//	string_points();
+	string_dynamic(); ????
+
+	return 0;
+}
+// end program

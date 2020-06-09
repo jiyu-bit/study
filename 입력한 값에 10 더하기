@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void) {
+	// 점수 하나 받아서 출력하기
+	
+	int score = 0;
+	printf("당신의 몸무게를 입력하시오.. ");
+	scanf_s("%d",  &score);
+	printf("당신의 몸무게는...  %d :", score + 10);
+
+	return 0;
+}

@@ -1,0 +1,98 @@
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+//파일 입출력
+//file 형, 구조체, 포인터 변수
+// 함수의 사용법!
+// 권한, 용도.. 소유자,그룹,외부- w r x
+
+
+struct_data {
+	int code;
+char  name[80];
+int type;
+};
+
+int main(void) {
+	FILE* fp;
+	//파일에 쓰기한대로 읽어들인다.
+	//파일에 쓰기한 형식이 뭐냐? : format
+	struct_data d = { 0 };
+	d.code = 100;
+	strncpy_s(d.name, 80, "임의문자열"), strlen("임의문자열"))
+	d.type = 1; //1번에 해당하는 문자 - 아스키에서 신호 - 메모장 ? 표 출력
+
+	fopen_s(&fp, fname, "demo-user.dat", "wb"); 
+	fwrite(%d, sizeof(d), 1, fp);
+	fclose(fp);
+
+
+	fopen_s(&fp, fname, "demo-user.dat", "rb");
+	fread(%t, sizeof(t), 1, fp);
+	fclose(fp);
+	printf("%d %s %d \n", t.code,t.name,)
+
+int main_binary(void) {
+	//블럭 입출력(바이너리 입출력)
+	//크기 단위로 입출- 그래서 블럭
+
+	FILE* fp;
+	const char* fname = "demo-block.dat"; //dat 데이터, 혹장자 자기 맘대로
+	char nums[5][20] = { 0 };
+	fopen_s(&fp, fname, "wb"); //wb바이널타입 - 텍스트  x
+	fread(&fp, fname, "wb"); 
+	fwrite(nums, sizeof(num), 20, fp); //크기 기준, 80바이트 데이터 /int일때 몇개인지  알려줘라
+	//함수 타입 보이드_어떤 표현이든 상관없다, 크기와 개수 = 배열
+	fclose(fp);
+	printf("%s \n", nums[0]);
+	printf("%s \n", nums[1]);
+	printf("%s \n", nums[2]);
+	printf("%s \n", nums[3]); //포맷의 개념
+	return 0;
+}//fwrite 
+//블록타입 대량의 데이터 전달할 때 편하다.
+//저장한걸 '읽어 들이기' 위해서는 읽기모드
+
+int main_append(void) {
+FILE* fp = NULL;
+fofen_s(); (&fp, "demo.txt", "w"); //파일이 있으면 기존 파일 끝에 추가,없으면 새로 생성 /char * : " "
+if (fp == NULL) {
+	printf("not found error : %s \n", "demo.txt");
+	return 0;
+}
+
+//텍스트 파일 쉽다.이미 출력함수 알고 있다.
+fprintf(fp "korea %d %s\n",
+	"192.168.00.1"demo.h")
+fputc('A', fp);
+fputc('\n', fp); //문자
+fputs("new new new new", fp);
+//여러가지, 여러개의 데이터
+fprintf(fp, "%d %s \n", 100, "korea");
+//파일 닫기
+fclose_s(fp);
+return 0;
+}
+
+
+fofen_s();
+fclose_s();
+
+int main(void) {
+	FILE** fp = NULL; 
+	fofen_s(); (&fp, "demo.txt", "w"); // char * : " "
+	if (fp == NULL) {
+		printf("not found error : %s \n", "demo.txt");
+		return 0;
+	}
+	//텍스트 파일 쉽다.이미 출력함수 알고 있다.
+		fputc('A', fp);
+		fputc('\n', fp); //문자
+		fputs("new new new new", fp);
+		//여러가지, 여러개의 데이터
+		fprintf(fp, "%d %s \n", 100, "korea");
+		//파일 닫기
+	fclose_s(fp);
+	return 0;
+}

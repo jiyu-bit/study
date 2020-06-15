@@ -1,0 +1,11 @@
+//1. while문을 이용해서 1부터 100까지 출력하세요
+int main() {
+	//1-100
+	int num = 1;
+	while (num < 101)//조건식
+	{
+		printf("%d\n", num);
+		num++;//증감식
+	}
+	return 0;
+}

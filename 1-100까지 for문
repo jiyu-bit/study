@@ -1,0 +1,10 @@
+void main_01()
+{
+	int cnt = 0;
+	//for (cnt = 1; cnt <= 5; ++cnt)
+	for (cnt = 1; cnt <= 100; ++cnt)
+	{
+		printf("%d\n", cnt);
+	}
+
+}

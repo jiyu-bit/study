@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <string.h>
+#include <windows.h>
+//모두 do~while문과 for문을 이용해서 해결하세요
+//
+//1. do~while문을 이용해서 1부터 100까지 출력하세요
+//for문을 이용해서 1부터 100까지 출력하세요
+
+void main_01()
+{
+	for (int i = 1; i <= 100; i++)
+	{
+		printf("%d \n", i);
+	}
+
+}
+//2. do~while문을 이용해서 10부터 20까지 출력하세요
+//for문을 이용해서 10부터 20까지 출력하세요
+void main_02()
+{
+	for (int i = 1; i <= 20; i++)
+	{
+		printf("%d \n", i);
+	}
+
+
+}
+//3. do~while문을 이용해서 1부터 10까지 합을 출력하세요
+//for문을 이용해서 1부터 10까지 합을 출력하세요
+
+void main_03() {
+	int sum = 0;
+	int i = 1;
+
+	for (i = 1; i <= 10; i++) {
+		sum += i;
+	}
+	
+		printf("1~10까지의 합은 >> %d \n", sum);
+	
+
+}
+
+//4. do~while문을 이용해서 1부터 10까지 중에 짝수만 출력하세요
+//do~while문내에 조건문을 넣어주면 됨
+//짝수 조건 if (num % 2 == 0)
+//입력한 숫자를 2로 나눈 나머지가 1이다..
+
+/*void main_04() {
+	int num; //변수 선언
+
+	for (num = 1; num <= 10; num++) { //0~10까지 반복..
+		if (num % 2 == 0) { //짝수 조건 
+			printf("1부터 10까지의 수 중에서 짝수만 출력 %d\n", num); //출력
+		}
+
+		//조건이 True일때 while문 내부의 구문을 반복적으로 실행
+	}
+}
+*/
+// 5. do~while문을 이용해서 양의 정수를 입력받고 그 수만큼 "감사합니다"를 출력하세요
+//for문을 이용해서 양의 정수를 입력받고 그 수만큼 "감사합니다"를 출력하세요
+void main() {
+	int num;
+	int i=0;
+	scanf_s("%d", &num);
+	do {
+		printf("감사합니다\n");
+		i++;
+
+
+	} while (i < num);
+
+		
+		
+	}
